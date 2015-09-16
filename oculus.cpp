@@ -1,8 +1,20 @@
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <OpenGL/OpenGL.h>
-#include <mach/mach_time.h>
+//Include GLEW  
+#include <GL/glew.h>  
 
+//Include GLFW  
+#include <GLFW/glfw3.h>  
+
+//Include GLM
+#include <glm/vec3.hpp> // glm::vec3
+
+#include <OVR.h>
+#include <OVR_CAPI.h>
+#include <OVR_CAPI_GL.h>
+
+// API to remove the health and safety warning was deprecitated, hence removing it.
+// #include "OculusSDK/LibOVR/Src/CAPI/CAPI_HSWDisplay.h"
+
+//Include the standard C++ headers  
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -26,11 +38,6 @@
 #endif
 
 #include "help.h"
-
-#include "../OculusSDK/LibOVR/Include/OVR.h"
-#include "../OculusSDK/LibOVR/Src/OVR_CAPI.h"
-#include "../OculusSDK/LibOVR/Src/OVR_CAPI_GL.h"
-#include "../OculusSDK/LibOVR/Src/CAPI/CAPI_HSWDisplay.h"
 
 static bool cam_moved = false;
 static bool debug = false;
